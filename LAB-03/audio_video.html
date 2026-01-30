@@ -1,0 +1,256 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Audio & Video</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(
+                rgba(255,255,255,0),
+                rgba(255,255,255,0)
+            ),
+            url("C:/Users/Navya Sri/Pictures/Saved Pictures/all_instrumental.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            text-align: center;
+            color: #003366;
+            margin-top: 20px;
+        }
+
+        .section {
+            width: 80%;
+            margin: 30px auto;
+            background: rgba(255,255,255,0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        iframe, video {
+            display: block;
+            margin: auto;
+            border-radius: 10px;
+        }
+        
+
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .back-btn {
+            text-align: center;
+            margin: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Department of Music & Arts</h1>
+
+#================= IFRAME SECTION ================= 
+<div class="section">
+    <h2>🎼 Classical Music Information (Iframe)</h2>
+
+    <iframe 
+    src="https://en.wikipedia.org/wiki/Carnatic_music"
+    width="900"
+    height="250">
+    </iframe>
+
+</div>
+
+ ================= AUDIO SECTION ================= 
+<div class="section">
+    <h2>🔊 Audio: Sri Maha Ganapathi</h2>
+
+    <audio controls>
+        <source src="C:/Users/Navya Sri/Desktop/Html/WT LABS/Srimahaganapathi.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+</div>
+
+# ================= VIDEO SECTION ================= 
+<div class="section">
+    <h2>🎥 Video: M.S. Subbulakshmi</h2>
+
+    <video width="420" height="240" controls>
+        <source src="C:/Users/Navya Sri/Desktop/Html/WT LABS/Ms_subbalakshmi_garu.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+</div>
+
+# ================= BACK BUTTON ================= 
+<div class="back-btn">
+    <a href="index.html">
+        <button type="button">⬅ Back</button>
+    </a>
+</div>
+
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Audio & Video</title>
+
+    <style>
+        /* ===== BASIC RESET ===== */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background:
+                linear-gradient(
+                    rgba(255,255,255,0.2),
+                    rgba(255,255,255,0.3)
+                ),
+                url("C:/Users/Navya Sri/Pictures/Saved Pictures/all_instrumental.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            color: #660000;
+        }
+
+        /* ===== COMMON FRAME STYLE ===== */
+        .media-frame {
+            border: 3px solid #003366;
+            border-radius: 12px;
+            padding: 15px;
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        /* ===== IFRAME SECTION ===== */
+        .iframe-box {
+            width: 600px;
+            margin: 30px auto;
+        }
+
+        .iframe-box iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        /* ===== AUDIO + VIDEO ROW ===== */
+        .media-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px auto;
+            flex-wrap: wrap;
+        }
+
+        /* AUDIO BOX */
+        .audio-box {
+            width: 300px;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        /* VIDEO BOX */
+        .video-box video {
+            width: 360px;
+            height: 210px;
+            border-radius: 8px;
+        }
+
+        /* ===== BUTTON ===== */
+        .back-btn {
+            text-align: center;
+            margin: 30px;
+        }
+
+        .back-btn button {
+            padding: 10px 25px;
+            font-size: 16px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .back-btn button:hover {
+            background-color: #0055aa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Department of Music & Arts</h1>
+
+    <!-- ===== IFRAME ===== -->
+    <div class="media-frame iframe-box">
+        <h2>🎼 Carnatic Music (Iframe)</h2>
+        <iframe src="https://en.wikipedia.org/wiki/Carnatic_music"></iframe>
+    </div>
+
+    <!-- ===== AUDIO + VIDEO SIDE BY SIDE ===== -->
+    <div class="media-row">
+
+        <!-- AUDIO -->
+        <div class="media-frame audio-box">
+            <h3>🔊 Sri Maha Ganapathi</h3>
+            <audio controls>
+                <source src="C:/Users/Navya Sri/Desktop/Html/WT LABS/Srimahaganapathi.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
+                <!-- IMAGE ABOVE AUDIO -->
+        <img src="C:/Users/Navya Sri/Pictures/Saved Pictures/all_2.jpg" 
+         alt="Music Image" 
+         width="200" height="100"
+         style="display:block; margin:auto; border-radius:10px; margin-bottom:10px;">
+
+
+        </div>
+
+        <!-- VIDEO -->
+        <div class="media-frame video-box">
+            <h3>🎥 M.S. Subbulakshmi</h3>
+            <video controls>
+                <source src="C:/Users/Navya Sri/Desktop/Html/WT LABS/Ms_subbalakshmi_garu.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+        </div>
+
+    </div>
+
+    <!-- ===== BACK BUTTON ===== -->
+     <div style="margin-top: 40px; text-align: center;">
+            <a href="index.html">
+                <button style="
+                    padding: 12px 25px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    background-color: #003366;
+                    color: white;
+                    border: none;
+                    border-radius: 8px;
+                    cursor: pointer;
+                ">
+                    ← Back to Dashboard
+                </button>
+            </a>
+        </div>
+    
+
+</body>
+</html>
