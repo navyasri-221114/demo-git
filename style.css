@@ -1,0 +1,158 @@
+/* RESET */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* BACKGROUND WITH TRANSPARENCY */
+body {
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.65),
+            rgba(255, 255, 255, 0.65)
+        ),
+        url("C:/Users/Navya Sri/Pictures/Saved Pictures/Tambura.avif");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.header h1 {
+    color: green;
+    margin-bottom: 5px;
+}
+
+.header h2 {
+    color: rgb(0, 60, 255);
+    margin-bottom: 10px;
+}
+
+/* MARQUEE TEXT */
+.swaras {
+    background: yellow;
+    color: green;
+    padding: 4px 10px;
+    font-weight: bold;
+}
+
+/* TOP NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: #003366;
+    padding: 12px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: yellow;
+}
+
+/* MAIN LAYOUT */
+.main {
+    display: flex;
+    flex: 1; /* allow it to grow so footer is pushed down */
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 220px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+    color: yellow;
+}
+
+/* CONTENT AREA */
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+/* DASHBOARD CARDS */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 200px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.card h3 {
+    margin-top: 20px;
+    color: #003366;
+}
+
+/* ADDED: Missing Footer Styles (matches your existing theme) */
+.footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+/* ADDED: Missing Responsive Design (Media Queries) */
+@media screen and (max-width: 768px) {
+    /* Stack layout vertically on smaller screens */
+    .main {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: auto;
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .cards {
+        justify-content: center;
+    }
+}
