@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Department Of Music & Arts</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="C:/Users/Navya Sri/Pictures/Saved Pictures/logo.png">
+
+    <style>
+        /* RESET */
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* BACKGROUND WITH TRANSPARENCY */
+        body {
+            background:
+                linear-gradient(
+                    rgba(255, 255, 255, 0.65),
+                    rgba(255, 255, 255, 0.65)
+                ),
+                url("C:/Users/Navya Sri/Pictures/Saved Pictures/Tambura.avif");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* HEADER */
+        .header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header h1 {
+            color: green;
+            margin-bottom: 5px;
+        }
+
+        .header h2 {
+            color: rgb(0, 60, 255);
+            margin-bottom: 10px;
+        }
+
+        /* MARQUEE TEXT */
+        .swaras {
+            background: yellow;
+            color: green;
+            padding: 4px 10px;
+            font-weight: bold;
+        }
+
+        /* TOP NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            background-color: #003366;
+            padding: 12px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: yellow;
+        }
+
+        /* MAIN LAYOUT */
+        .main {
+            display: flex;
+            min-height: calc(100vh - 200px);
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 220px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .sidebar ul li a:hover {
+            color: yellow;
+        }
+
+        /* CONTENT AREA */
+        .content {
+            flex: 1;
+            padding: 30px;
+        }
+
+        /* DASHBOARD CARDS */
+        .cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 200px;
+            height: 120px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        .card h3 {
+            margin-top: 20px;
+            color: #003366;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <h1>Rajiv Gandhi University Of Knowledge And Technologies</h1>
+    <h2>Department Of Music & Arts</h2>
+
+    <marquee scrollamount="5" width="220" direction="right">
+        <span class="swaras">స రి గ మ ప ద ని స</span>
+    </marquee>
+</div>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="about.html">About</a>
+    <a href="community.html">Community</a>
+    <a href="courses.html">Courses</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<!-- MAIN DASHBOARD -->
+<div class="main">
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">🎵 Classical Music</a></li>
+            <li><a href="#">🎶 Vocal Training</a></li>
+            <li><a href="#">🥁 Instruments</a></li>
+            <li><a href="#">💃 Dance Arts</a></li>
+            <li><a href="#">🎨 Fine Arts</a></li>
+        </ul>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <h2>Dashboard Overview</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Courses</h3>
+                <p>12 Available</p>
+            </div>
+
+            <div class="card">
+                <h3>Students</h3>
+                <p>350+</p>
+            </div>
+
+            <div class="card">
+                <h3>Faculty</h3>
+                <p>25</p>
+            </div>
+
+            <div class="card">
+                <h3>Events</h3>
+                <p>8 Upcoming</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
