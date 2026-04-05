@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Login/Signup - Department Of Music & Arts</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="C:/Users/Navya Sri/Pictures/Saved Pictures/logo.png">
+    <style>
+        .form-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 0 auto; /* Center the form */
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #003366;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            background: #003366;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background: rgb(0, 60, 255);
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <h1>Rajiv Gandhi University Of Knowledge And Technologies</h1>
+    <h2>Department Of Music & Arts</h2>
+</header>
+
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="courses.html">Courses</a>
+    <a href="login.html">Login/Signup</a>
+</nav>
+
+<main class="main">
+    <section class="content" style="text-align: center;">
+        <div class="form-container">
+            <h2 style="color: #003366; margin-bottom: 20px;">Student Login</h2>
+            <form action="index.html" method="get">
+                <div class="form-group">
+                    <label for="username">Username / ID</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p style="margin-top: 15px;"><a href="#" style="color: rgb(0, 60, 255);">Don't have an account? Sign up here.</a></p>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2026 Department Of Music & Arts. Developed by Priya & Navya.</p>
+</footer>
+
+</body>
+</html>
