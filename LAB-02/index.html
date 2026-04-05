@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="utf-8">
     <title>Department Of Music & Arts</title>
@@ -9,98 +10,114 @@
 
     <!-- COMMON CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- INTERACTIVE JS -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
-    <img src="C:/Users/Navya Sri/Pictures/Saved Pictures/Trio_music.jpg"
-         alt="Tyagaraja Dikshitar Syama Sastri"
-         class="left-img">
+    <!-- HEADER -->
+    <div class="header">
+        <img src="C:/Users/Navya Sri/Pictures/Saved Pictures/Trio_music.jpg" alt="Tyagaraja Dikshitar Syama Sastri"
+            class="left-img">
 
-    <img src="C:/Users/Navya Sri/Pictures/Saved Pictures/Music.webp"
-         alt="Tambura"
-         class="right-img">
+        <img src="C:/Users/Navya Sri/Pictures/Saved Pictures/Music.webp" alt="Tambura" class="right-img">
 
-    <h1>Rajiv Gandhi University Of Knowledge And Technologies</h1>
-    <h2>Department Of Music & Arts</h2>
+        <h1>Rajiv Gandhi University Of Knowledge And Technologies</h1>
+        <h2>Department Of Music & Arts</h2>
 
-    <marquee scrollamount="5" width="220" direction="right">
-        <span class="swaras">స రి గ మ ప ద ని స</span>
-    </marquee>
-</div>
-
-<!-- NAVBAR -->
-<div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="community.html">Community</a>
-    <a href="courses.html">Courses</a>
-    <a href="admissions.html">Admissions</a>
-    <a href="contact.html">Contact</a>
-</div>
-
-<!-- MAIN DASHBOARD -->
-<div class="main">
-
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-        <ul>
-            <li><a href="#">🎵 Classical Music</a></li>
-            <li><a href="#">🎶 Vocal Training</a></li>
-            <li><a href="#">🥁 Instruments</a></li>
-            <li><a href="#">💃 Dance Arts</a></li>
-            <li><a href="#">🎨 Fine Arts</a></li>
-        </ul>
+        <marquee scrollamount="5" width="220" direction="right">
+            <span class="swaras">స రి గ మ ప ద ని స</span>
+        </marquee>
     </div>
 
-    <!-- CONTENT -->
-    <div class="content">
-        <h2>Dashboard Overview</h2>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="community.html">Community</a>
+        <a href="courses.html">Courses</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="contact.html">Contact</a>
+    </div>
 
-        <div class="cards">
-            <div class="card">
-                <h3>Courses</h3>
-                <p>12 Available</p>
-            </div>
+    <!-- MAIN DASHBOARD -->
+    <div class="main">
 
-            <div class="card">
-                <h3>Students</h3>
-                <p>350+</p>
-            </div>
-
-            <div class="card">
-                <h3>Faculty</h3>
-                <p>25</p>
-            </div>
-
-            <div class="card">
-                <h3>Events</h3>
-                <p>8 Upcoming</p>
-            </div>
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">🎵 Classical Music</a></li>
+                <li><a href="#">🎶 Vocal Training</a></li>
+                <li><a href="#">🥁 Instruments</a></li>
+                <li><a href="#">💃 Dance Arts</a></li>
+                <li><a href="#">🎨 Fine Arts</a></li>
+            </ul>
         </div>
 
-        <!-- BUTTON TO NEXT PAGE -->
-        <div style="margin-top: 40px; text-align: center;">
-            <a href="tables.html">
-                <button style="
-                    padding: 12px 25px;
-                    font-size: 16px;
-                    font-weight: bold;
-                    background-color: #003366;
-                    color: white;
-                    border: none;
-                    border-radius: 8px;
-                    cursor: pointer;
-                ">
-                    View Courses & Faculty →
-                </button>
-            </a>
+        <!-- CONTENT -->
+        <div class="content">
+            <h2>Dashboard Overview</h2>
+
+            <!-- ===== INTERACTIVE JS SECTION ===== -->
+            <div class="interactive-panel">
+                <h2 style="margin-top:0;">Welcome Space</h2>
+                <div id="welcome-message" class="welcome-msg">
+                    Welcome Guest to the Music & Arts Department
+                </div>
+                
+                <div class="interactive-tools">
+                    <!-- Feature 1: Personalize -->
+                    <div class="tool-box">
+                        <button id="personalize-btn" class="primary-btn">Personalize Dashboard</button>
+                    </div>
+
+                    <!-- Feature 2: Event Object -->
+                    <div class="event-box">
+                        <h3 id="event-title">Loading Event...</h3>
+                        <p id="event-seats">Loading Seats...</p>
+                        <button id="book-ticket-btn" class="primary-btn" style="background-color: #660000;">Book Ticket</button>
+                    </div>
+                </div>
+            </div>
+            <!-- ===== END INTERACTIVE JS SECTION ===== -->
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Courses</h3>
+                    <p>12 Available</p>
+                </div>
+
+                <div class="card">
+                    <h3>Students</h3>
+                    <p>350+</p>
+                </div>
+
+                <div class="card">
+                    <h3>Faculty</h3>
+                    <p>25</p>
+                </div>
+
+                <div class="card">
+                    <h3>Events</h3>
+                    <p>8 Upcoming</p>
+                </div>
+            </div>
+
+            <!-- BUTTON TO NEXT PAGE -->
+            <div class="btn-container">
+                <a href="tables.html">
+                    <button class="primary-btn">
+                        View Courses & Faculty →
+                    </button>
+                </a>
+            </div>
+
         </div>
 
     </div>
-
-</div>
 
 </body>
+
 </html>
