@@ -15,7 +15,7 @@ console.log("Initial Students (let):", totalStudents);
 
 // 3. Attempt reassignment of const and observe behavior
 try {
-    DEPARTMENT_NAME = "Science Department"; 
+    DEPARTMENT_NAME = "Science Department";
 } catch (error) {
     console.warn("Expected Error: Cannot reassign const variable 'DEPARTMENT_NAME'. Message:", error.message);
 }
@@ -33,9 +33,9 @@ function calculateAvailableSpots(maximumCapacity, currentEnrolled) {
 }
 
 // Function Expression (Reusable DOM Updater)
-const updateDOMContent = function(elementId, htmlContent) {
+const updateDOMContent = function (elementId, htmlContent) {
     const element = document.getElementById(elementId);
-    if(element) {
+    if (element) {
         element.innerHTML = htmlContent;
     }
 };
@@ -56,16 +56,16 @@ const departmentProfile = {
     theme: "Classical Music & Arts",
     headOfDept: "Dr. Sharma",
     coursesAvailable: 12,
-    
+
     // 2. Define at least one method inside the object updating object data using 'this'
-    addNewCourse: function(courseName) {
+    addNewCourse: function (courseName) {
         this.coursesAvailable += 1;
         console.log(`New course '${courseName}' has been added!`);
         console.log(`Total courses are now: ${this.coursesAvailable}`);
     },
 
     // 3. Method accessing object properties logically
-    getDisplayInfo: function() {
+    getDisplayInfo: function () {
         return `<strong>Theme:</strong> ${this.theme} <br/> <strong>Head Professor:</strong> ${this.headOfDept} <br/> <strong>Active Courses:</strong> ${this.coursesAvailable}`;
     }
 };
@@ -80,7 +80,7 @@ console.log("Head of Dept (Dot notation):", departmentProfile.headOfDept);
 console.log("Theme (Bracket notation):", departmentProfile["theme"]);
 
 // Property Update (Updating object properties dynamically)
-departmentProfile.headOfDept = "Prof. Rajan"; 
+departmentProfile.headOfDept = "Prof. Rajan";
 console.log("Updated Head of Dept:", departmentProfile.headOfDept);
 
 // Display Object Data on the webpage
@@ -101,18 +101,18 @@ const visitorMessage = document.getElementById("visitor-message");
 enrollBtn.addEventListener("click", () => {
     // confirm() pop-up for yes/no decisions
     const confirmEnroll = confirm("Are you sure you want to enroll a new student to the department?");
-    
+
     if (confirmEnroll) {
         // Variable update & DOM Content update
         totalStudents++;
         updateDOMContent("student-count-display", `<strong>Current Enrolled Students:</strong> ${totalStudents} (Spots Left: ${calculateAvailableSpots(500, totalStudents)})`);
-        
+
         // Trigger Method by User Action
         departmentProfile.addNewCourse("Advanced Vocal Symphony");
-        
+
         // Method triggered updates object display in DOM
         updateDOMContent("dept-details", departmentProfile.getDisplayInfo());
-        
+
         // alert() pop-up for notifications
         alert("Student successfully enrolled and a new course was launched!");
     } else {
@@ -138,15 +138,15 @@ changeThemeBtn.addEventListener("mouseout", () => {
 surveyBtn.addEventListener("click", () => {
     // prompt() pop-up for user input
     let visitorName = prompt("Please enter your name to take the visitor survey:", "Guest");
-    
+
     // Check user decision based on user input
     if (visitorName !== null && visitorName.trim() !== "") {
         // Use Arrow Function
         let message = getWelcomeMessage(visitorName);
-        
+
         // Display user responses on the webpage
         visitorMessage.innerHTML = `<span style='color: green; font-weight: bold;'>${message}</span>`;
-        
+
         // Update DOM Attributes dynamically
         surveyBtn.setAttribute("disabled", "true");
         surveyBtn.style.opacity = "0.5";

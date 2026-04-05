@@ -182,3 +182,146 @@ tr:nth-child(even) {
 tr:hover {
     background-color: #ffeaa7;
 }
+
+/* ===== MEDIA SECTIONS (From audio_video.html) ===== */
+
+.media-frame h2, .media-frame h3, .media-row h3 {
+    text-align: center;
+    color: #660000;
+}
+
+/* ===== COMMON FRAME STYLE ===== */
+.media-frame {
+    border: 3px solid #003366;
+    border-radius: 12px;
+    padding: 15px;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* ===== IFRAME SECTION ===== */
+.iframe-box {
+    width: 600px;
+    margin: 30px auto;
+}
+
+.iframe-box iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* ===== AUDIO + VIDEO ROW ===== */
+.media-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px auto;
+    flex-wrap: wrap;
+}
+
+/* AUDIO BOX */
+.audio-box {
+    width: 300px;
+}
+
+audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* VIDEO BOX */
+.video-box video {
+    width: 360px;
+    height: 210px;
+    border-radius: 8px;
+}
+
+/* ===== BUTTON AND UTILITIES ===== */
+.btn-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.primary-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background-color: #0055aa;
+}
+
+.media-gallery-title {
+    text-align: center;
+    color: #660000;
+    margin-bottom: 20px;
+}
+
+.audio-img {
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* ===== INTERACTIVE PANEL ===== */
+.interactive-panel {
+    background: rgba(255,255,255,0.95);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-top: 5px solid #003366;
+}
+
+.interactive-panel h2 {
+    color: #003366;
+    text-align: center;
+}
+
+.welcome-msg {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: green;
+}
+
+.interactive-tools {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tool-box {
+    text-align: center;
+    margin: 10px;
+}
+
+.event-box {
+    text-align: center;
+    margin: 10px;
+    border: 3px solid #660000;
+    padding: 15px;
+    background-color: #fffaf0;
+    border-radius: 10px;
+}
+
+.event-box h3 {
+    margin-top: 0;
+    color: #660000;
+}
+
+.event-box p {
+    font-size: 16px;
+    font-weight: bold;
+}

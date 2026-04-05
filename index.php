@@ -46,25 +46,15 @@ session_start();
     <a href="courses.html">Courses</a>
     <a href="admissions.html">Admissions</a>
     <a href="contact.html">Contact</a>
-    <a href="<?php echo isset($_SESSION['user_name']) ? 'logout.php' : 'google_Oauth.php'; ?>">
-<?php
-if(isset($_SESSION['user_name'])){
-    echo "Welcome " . $_SESSION['user_name'];
-} else {
-    echo "Login";
-}
-?>
-</a>
-
-<?php
-if(isset($_SESSION['user_name'])){
-    echo "Welcome " . $_SESSION['user_name'];
-} else {
-    echo "Login";
-}
-?>
-</a>
-
+    <a href="<?php echo isset($_SESSION['user_name']) ? 'logout.php' : 'google_Oauth.php'; ?>" style="background-color: #db4437; color: white; padding: 5px 10px; border-radius: 4px;">
+        <?php
+        if(isset($_SESSION['user_name'])){
+            echo "Welcome " . htmlspecialchars($_SESSION['user_name']) . " | Logout";
+        } else {
+            echo "Sign in with Google";
+        }
+        ?>
+    </a>
 </div>
 
 <!-- MAIN DASHBOARD -->

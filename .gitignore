@@ -1,0 +1,4 @@
+vendor/
+.env
+php lab/uploads/
+*.pdf
