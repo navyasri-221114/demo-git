@@ -28,8 +28,8 @@ if(isset($_POST['login'])){
     <meta charset="utf-8">
     <title>Login - Department Of Music & Arts</title>
     <link rel="icon" type="image/png" href="C:/Users/Navya Sri/Pictures/Saved Pictures/logo.png">
-    <link rel="stylesheet" href="../LAB-02/style.css">
-    <script src="../LAB-03/script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -46,12 +46,12 @@ if(isset($_POST['login'])){
 
 <!-- NAVBAR -->
 <div class="navbar">
-    <a href="../LAB-02/index.html">Home</a>
-    <a href="../LAB-02/about.html">About</a>
-    <a href="../LAB-02/community.html">Community</a>
-    <a href="../LAB-02/courses.html">Courses</a>
-    <a href="../LAB-02/admissions.html">Admissions</a>
-    <a href="../LAB-02/contact.html">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="community.html">Community</a>
+    <a href="courses.html">Courses</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="contact.html">Contact</a>
     <a href="login.php" style="color: yellow; font-weight: bold;">Login</a>
     <a href="register.php">Register</a>
 </div>
