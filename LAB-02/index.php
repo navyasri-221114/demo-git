@@ -1,3 +1,23 @@
+<?php
+// LAB-05: MINI FILE MANAGER LOGIC
+$dir = '../LAB-05/uploads/';
+@mkdir($dir, 0777, true);
+$log = '../LAB-05/log.txt';
+
+if (isset($_FILES['f']) && move_uploaded_file($_FILES['f']['tmp_name'], $dir . basename($_FILES['f']['name']))) {
+    file_put_contents($log, date('Y-m-d H:i')." Upload: {$_FILES['f']['name']}\n", FILE_APPEND); // Mode a+ internally
+}
+if (isset($_GET['del']) && unlink($dir . basename($_GET['del']))) {
+    file_put_contents($log, date('Y-m-d H:i')." Delete: {$_GET['del']}\n", FILE_APPEND);
+    header("Location: index.php"); exit;
+}
+if (isset($_GET['dl']) && is_file($p = $dir . basename($_GET['dl']))) {
+    file_put_contents($log, date('Y-m-d H:i')." Download: {$_GET['dl']}\n", FILE_APPEND);
+    header('Content-Type: application/octet-stream');
+    header('Content-Disposition: attachment; filename="'.basename($p).'"');
+    readfile($p); exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -105,6 +125,32 @@
                     <h3>Events</h3>
                     <p>8 Upcoming</p>
                 </div>
+            </div>
+
+            <!-- LAB 05: MINI FILE MANAGER UI -->
+            <div style="background:rgba(255,255,255,0.05); padding:20px; border-radius:8px; margin-top:20px; border:1px solid #444;">
+                <h3 style="margin-top:0;">Admissions - Document Upload Portal</h3>
+                <form method="post" enctype="multipart/form-data" style="margin-bottom:15px;">
+                    <input type="file" name="f" required style="border:1px solid #777; padding:8px; color:white; border-radius:4px;">
+                    <button type="submit" class="primary-btn">Upload</button>
+                </form>
+                <ul style="list-style:none; padding:0;">
+                    <?php
+                    $files = array_diff(scandir($dir), ['.','..']);
+                    if(empty($files)) echo "<li>No documents uploaded yet.</li>";
+                    foreach($files as $f) {
+                        $sz = filesize($dir.$f);
+                        $tm = date('Y-m-d H:i', filemtime($dir.$f));
+                        echo "<li style='padding:8px 0; border-bottom:1px solid #444;'>
+                            <strong>$f</strong> - $sz bytes ($tm) 
+                            <span style='float:right;'>
+                                <a href='?dl=".urlencode($f)."' style='color:#6bf; text-decoration:none; margin-right:15px;'>⬇ Download</a> 
+                                <a href='?del=".urlencode($f)."' style='color:#ff6b6b; text-decoration:none;'>❌ Delete</a>
+                            </span>
+                        </li>";
+                    }
+                    ?>
+                </ul>
             </div>
 
             <!-- BUTTON TO NEXT PAGE -->
